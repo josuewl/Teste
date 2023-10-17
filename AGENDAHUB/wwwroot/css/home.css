@@ -1,0 +1,554 @@
+﻿body {
+    color: #4c4b5b;
+    font-family: "Euclid Circular A", "Poppins";
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+* {
+    box-sizing: border-box;
+
+}
+
+
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50%;
+    margin-right: 60px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 65px;
+    color: #2C3E50;
+    text-align: center;
+    margin-bottom: 0;
+   margin-right: 65px;
+   
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #2C3E50;
+    text-align: center;
+    margin-top: 0px;
+    margin-right: 65px;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    text-align: inherit;
+    margin-left: 10px;
+}
+
+.divCalendarioRelogio {
+    width: 40%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.calendarioRelogio {
+    height: 90vh;
+    margin-left: 100px;
+   
+}
+
+.video {
+    margin-top: 50px;
+}
+.servicos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 20px;
+}
+
+.titleservicos {
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+    .titleservicos h3:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 5px;
+        width: 55px;
+        background-color: #36C9C9;
+        border-radius: 50px;
+    }
+
+    .titleservicos h3:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 2px;
+        height: 1px;
+        width: 95%;
+        max-width: 255px;
+        background-color: #36C9C9;
+        border-radius: 50%;
+    }
+
+    h3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 50px;
+        margin-bottom: 50px;
+    }
+
+
+/*Cards*/
+
+
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 20px; /* Adicione espaço entre os cards */
+    margin-top: 50px;
+}
+
+.card {
+    padding: 20px;
+    width: 330px;
+    min-height: 370px;
+    border-radius: 20px;
+    background: #e8e8e8;
+    box-shadow: 5px 5px 6px #dadada, -5px -5px 6px #f6f6f6;
+    transition: 0.4s;
+}
+
+    .card:hover {
+       translate: 0 -10px;
+    }
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e54a7;
+    margin: 15px 0 0 10px;
+}
+
+.card-image img {
+    min-height: 170px;
+    max-height: 200px;
+    width: 100%; /* Para garantir que a imagem se ajuste ao contêiner */
+    object-fit: cover;
+    background-color: #c9c9c9;
+    border-radius: 15px;
+    box-shadow: inset 8px 8px 10px #c3c3c3, inset -8px -8px 10px #cfcfcf;
+}
+
+.card-body {
+    margin: 1px 0 0 10px;
+    color: rgb(31, 31, 31);
+    font-size: 15px;
+    font-weight: 700;
+    color: #636363;
+}
+
+.footer {
+    float: inherit;
+    margin: 1px 0 0 10px;
+    font-size: 13px;
+    color: #636363;
+}
+
+.by-name {
+    font-weight: 700;
+}
+
+
+/*Inicio Header*/
+    nav {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+    height: 80px;
+    background: rgba(52, 152, 219, 0);
+    transition: 0.3s;
+}
+
+
+    nav.visible {
+        top: 0;
+        transform: translate(0);
+    }
+
+    nav > img {
+        width: 180px;
+        height: 180px;
+        margin-top: 15px;
+        margin-left: 80px;
+    }
+
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+}
+
+.item {
+    font-size: 16px;
+    color:black;
+}
+
+.nav-items > a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    font-family: Arial;
+    height: 72px;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+}
+
+    .nav-items > a:hover {
+        color: #4568dc; 
+    }
+
+.bn30 {
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: white;
+}
+
+    .bn30 .text {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+    }
+
+    .bn30:after {
+        content: "";
+        border-radius: 18px;
+        position: absolute;
+        margin: 4px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background: rgba(13, 202, 240, 1);
+    }
+
+    .bn30:hover {
+        background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+        box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+    }
+
+        .bn30:hover .text {
+            background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+        }
+
+/*Fim Header*/
+
+.main-class {
+    z-index: 0;
+    position: absolute;
+    margin-top: 120px;
+    width: 90%;
+    height: 450vh;
+    background: rgba(236, 220, 248, 0.5); 
+    border-radius: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 100px rgba(0, 0, 0, 0.4);
+}
+
+
+
+    
+#page-section {
+    flex: 1;
+    padding-top: 72px;
+    position: relative;
+    min-height: calc(500vh - 72px);
+    overflow: hidden;
+}
+
+.circulo1 {
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(to bottom, #9CE9E9, #8BE3E3, #36C9C9);
+    border-radius: 50%;
+   
+}
+
+
+
+
+
+
+
+.circulo2 {
+    position: relative;
+    top: 200px;
+    left: 400px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to bottom, #9CE9E9, #8BE3E3, #36C9C9);
+    border-radius: 50%;
+    
+}
+
+.circulo3 {
+    position: absolute;
+    top: 410px;
+    left: 700px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to bottom, #9CE9E9, #8BE3E3, #36C9C9);
+    border-radius: 50%;
+}
+
+.circulo4 {
+    position: relative;
+    top: 500px;
+    left: 30px;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(to bottom, #9CE9E9, #8BE3E3, #36C9C9);
+    border-radius: 50%;
+}
+
+
+.circulo5 {
+    position: absolute;
+    top: 410px;
+    left: 165vh;
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(to bottom, #9CE9E9, #8BE3E3, #36C9C9);
+    border-radius: 50%;
+}
+
+.circulo6 {
+    position: relative;
+    top: 750px;
+    left: 200px;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to bottom, #9CE9E9, #8BE3E3, #36C9C9);
+    border-radius: 50%;
+}
+
+.circulo7 {
+    position: relative;
+    top: 600px;
+    right: 200px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, #9CE9E9, #8BE3E3, #36C9C9);
+    border-radius: 50%;
+}
+
+.circulo8 {
+    position: absolute;
+    top: 900px;
+    left: 850px;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to bottom, #9CE9E9, #8BE3E3, #36C9C9);
+    border-radius: 50%;
+}
+
+.circulo9 {
+    position: relative;
+    top: 700px;
+    left: 200px;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to bottom, #9CE9E9, #8BE3E3, #36C9C9);
+    border-radius: 50%;
+}
+
+
+/* Estilos para a seção do rodapé */
+#section-footer {
+    width: 100%;
+    background:  rgba(13, 202, 240, 1) 100%;
+    padding-top: 60px;
+    margin-top: auto; 
+    position: relative;
+    z-index: 1;
+}
+
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 0 0px;
+}
+
+.fa-brands {
+    color: #4c4b5b;
+}
+/* Estilos para telas menores (máximo de 620px) */
+@media (max-width: 620px) {
+    footer {
+        flex-direction: column;
+    }
+
+        /* Estilos específicos para a classe 'bottom' dentro do rodapé */
+        footer.bottom {
+            gap: 16px;
+            flex-direction: column-reverse;
+        }
+}
+
+/* Estilos para imagens dentro do rodapé */
+footer > img {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+/* Estilos para telas maiores ou iguais a 620px */
+@media (width >= 620px) {
+    footer {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 0;
+    }
+}
+
+/* Estilos gerais para o texto dentro do rodapé */
+footer {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+    /* Estilos para a parte superior do rodapé */
+    footer.top {
+        border-bottom: 2px solid #3a4f6a;
+        padding-bottom: 20px;
+    }
+
+    /* Estilos para a parte inferior do rodapé */
+    footer.bottom {
+        padding: 20px 0;
+        justify-content: space-between;
+    }
+
+    /* Estilos para os links no topo do rodapé */
+    footer.top .links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+/* Estilos para as divisões de links no rodapé */
+.links > div {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Estilos para os títulos no rodapé */
+footer h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para o texto 'legal' no rodapé */
+.legal {
+    font-size: 12px;
+    font-family: Arial;
+}
+
+.slogan {
+    font-family: Arial;
+}
+
+    /* Estilos para os links dentro do texto 'legal' */
+    .legal > a {
+        margin: 0 4px;
+    }
+
+    /* Estilos para o espaço entre os elementos no texto 'legal' */
+    .legal > span {
+        margin-right: 10px;
+    }
+
+/* Estilos para os links na parte inferior do rodapé */
+footer.bottom .links {
+    display: flex;
+    gap: 18px;
+}
+
+    /* Estilos para os links na parte inferior do rodapé */
+    footer.bottom .links > a {
+        font-size: 24px;
+    }
+
+/* Estilos para telas menores que 420px */
+@media (width < 420px) {
+    footer {
+        text-align: center;
+        align-items: center;
+    }
+
+        /* Ajuste para a grade de links no topo do rodapé */
+        footer.top .links {
+            grid-template-columns: 1fr;
+        }
+
+        /* Ajuste para a parte inferior do rodapé */
+        footer.bottom {
+            align-items: center;
+        }
+
+    /* Estilos para o texto 'legal' em telas menores */
+    .legal > span {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 2px;
+    }
+}
